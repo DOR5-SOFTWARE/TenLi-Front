@@ -13,15 +13,8 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 require('./rxjs-extensions');
-// Imports for loading & configuring the in-memory web api
-var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
-var in_memory_data_service_1 = require('./services/in-memory-data.service');
 var app_component_1 = require('./app.component');
-var dashboard_component_1 = require('./dashboard/components/dashboard.component');
-var heroes_component_1 = require('./hero/components/heroes.component');
-var hero_detail_component_1 = require('./hero/components/hero-detail.component');
-var hero_search_component_1 = require('./hero/components/hero-search.component');
-var hero_service_1 = require('./services/hero.service');
+var random_users_service_1 = require('./services/random-users.service');
 var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
@@ -32,18 +25,13 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
                 app_routing_1.routing
             ],
             declarations: [
-                app_component_1.AppComponent,
-                dashboard_component_1.DashboardComponent,
-                hero_detail_component_1.HeroDetailComponent,
-                heroes_component_1.HeroesComponent,
-                hero_search_component_1.HeroSearchComponent
+                app_component_1.AppComponent
             ],
             providers: [
-                hero_service_1.HeroService
+                random_users_service_1.RandomUsersService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
