@@ -1,32 +1,83 @@
-/* Master Styles */
-
-h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
+@font-face {
+    font-family: 'almoni';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/app/styles/fonts/almoni-dl-aaa-700.eot');
+    src: url('/app/styles/fonts/almoni-dl-aaa-700.eot#iefix') format('embedded-opentype'), url('/app/styles/fonts/almoni-dl-aaa-700.woff') format('woff'), url('/app/styles/fonts/almoni-dl-aaa-700.ttf') format('truetype');
 }
 
-h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+@font-face {
+    font-family: 'almoni';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/app/styles/fonts/almoni-dl-aaa-400.eot');
+    src: url('/app/styles/fonts/almoni-dl-aaa-400.eot#iefix') format('embedded-opentype'), url('/app/styles/fonts/almoni-dl-aaa-400.woff') format('woff'), url('/app/styles/fonts/almoni-dl-aaa-400.ttf') format('truetype');
 }
 
-body {
-    margin: 2em;
+@font-face {
+    font-family: 'almoni';
+    font-weight: 300;
+    font-style: normal;
+    src: url('/app/styles/fonts/almoni-dl-aaa-300.eot');
+    src: url('/app/styles/fonts/almoni-dl-aaa-300.eot#iefix') format('embedded-opentype'), url('/app/styles/fonts/almoni-dl-aaa-300.woff') format('woff'), url('/app/styles/fonts/almoni-dl-aaa-300.ttf') format('truetype');
 }
 
-body, input[text], button {
-    color: #888;
-    font-family: Cambria, Georgia;
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'almoni';
+    font-weight: 400;
 }
 
 
-/* . . . */
+/* HTML5 display-role reset for older browsers */
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
 
-/* everywhere else */
+ol,
+ul {
+    list-style: none;
+}
 
-* {
-    font-family: Arial, Helvetica, sans-serif;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.clear {
+    clear: both;
 }

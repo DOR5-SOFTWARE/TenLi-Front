@@ -1,25 +1,30 @@
+import { RandomUser } from './../models/random-user/random-user.model';
+import { Gender } from '../models/random-user/properties/gender.model';
+
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http, URLSearchParams } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
-
-import { RandomUser } from '../models/random-user/random-user.model';
 
 @Injectable()
 export class RandomUsersService {
 
-  private serviceUrl = 'http://tenli.co.il/api/v1/RandomUsers/';
+  private serviceUrl = '/api/v1/RandomUsers/';
 
   private headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }
 
-  getRandomUser(): Promise<RandomUser> {
+  getRandomUser(gender: Gender): Promise<RandomUser> {
+
     var method = "GetRandomUser";
 
-    return this.http.get(this.serviceUrl + method)
+    let params: URLSearchParams = new URLSearchParams();
+    params.set('gender', Gender[gender]);
+
+    return this.http.get(this.serviceUrl + method, { search: params })
       .toPromise()
-      .then(response => response.json().data as RandomUser)
+      .then(response => response.json() as RandomUser)
       .catch(this.handleError);
   }
 

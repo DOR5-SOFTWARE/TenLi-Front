@@ -8,14 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var random_users_generator_component_1 = require('./components/random-users-generator/random-users-generator.component');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 require('./rxjs-extensions');
-var app_component_1 = require('./app.component');
+var app_component_1 = require('./components/app/app.component');
+var ng2_fullpage_1 = require("ng2-fullpage");
 var random_users_service_1 = require('./services/random-users.service');
-var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,14 +25,16 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                http_1.HttpModule,
-                app_routing_1.routing
+                http_1.HttpModule
             ],
             declarations: [
-                app_component_1.AppComponent
+                app_component_1.AppComponent,
+                random_users_generator_component_1.RandomUsersGeneratorComponent,
+                ng2_fullpage_1.MnFullpageDirective
             ],
             providers: [
-                random_users_service_1.RandomUsersService
+                random_users_service_1.RandomUsersService,
+                ng2_fullpage_1.MnFullpageService
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

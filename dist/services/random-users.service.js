@@ -8,20 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var gender_model_1 = require('../models/random-user/properties/gender.model');
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
 var RandomUsersService = (function () {
     function RandomUsersService(http) {
         this.http = http;
-        this.serviceUrl = 'http://tenli.co.il/api/v1/RandomUsers/';
+        this.serviceUrl = '/api/v1/RandomUsers/';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
     }
-    RandomUsersService.prototype.getRandomUser = function () {
+    RandomUsersService.prototype.getRandomUser = function (gender) {
         var method = "GetRandomUser";
-        return this.http.get(this.serviceUrl + method)
+        var params = new http_1.URLSearchParams();
+        params.set('gender', gender_model_1.Gender[gender]);
+        return this.http.get(this.serviceUrl + method, { search: params })
             .toPromise()
-            .then(function (response) { return response.json().data; })
+            .then(function (response) { return response.json(); })
             .catch(this.handleError);
     };
     // getHero(id: number): Promise<Hero> {

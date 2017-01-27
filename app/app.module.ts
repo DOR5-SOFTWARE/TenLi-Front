@@ -1,28 +1,33 @@
-import { NgModule }      from '@angular/core';
+import { RandomUsersGeneratorComponent } from './components/random-users-generator/random-users-generator.component';
+
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
-import { HttpModule }   from '@angular/http';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import './rxjs-extensions';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './components/app/app.component';
+
+
+import { MnFullpageDirective, MnFullpageService } from "ng2-fullpage";
 
 import { RandomUsersService } from './services/random-users.service';
-
-import { routing } from './app.routing';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    routing
+    HttpModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    RandomUsersGeneratorComponent,
+    MnFullpageDirective
   ],
   providers: [
-    RandomUsersService
+    RandomUsersService,
+    MnFullpageService
   ],
   bootstrap: [AppComponent]
 })

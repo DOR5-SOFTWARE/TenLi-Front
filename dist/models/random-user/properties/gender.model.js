@@ -1,7 +1,8 @@
 "use strict";
 (function (Gender) {
-    Gender[Gender["male"] = 0] = "male";
-    Gender[Gender["female"] = 1] = "female";
+    Gender[Gender["Any"] = 0] = "Any";
+    Gender[Gender["Male"] = 1] = "Male";
+    Gender[Gender["Female"] = 2] = "Female";
 })(exports.Gender || (exports.Gender = {}));
 var Gender = exports.Gender;
 //# sourceMappingURL=gender.model.js.map

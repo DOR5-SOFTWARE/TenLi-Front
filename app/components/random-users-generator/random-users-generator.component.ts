@@ -1,9 +1,9 @@
+import { RandomUser } from './../../models/random-user/random-user.model';
+import { Gender } from './../../models/random-user/properties/gender.model';
+
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
 
 import { RandomUsersService } from '../../services/random-users.service';
-
-import { RandomUser } from '../../models/random-user/random-user.model';
 
 @Component({
   selector: 'random-users-generator',
@@ -12,20 +12,31 @@ import { RandomUser } from '../../models/random-user/random-user.model';
 })
 
 export class RandomUsersGeneratorComponent implements OnInit {
+  
   @Input()
-  randomUser : RandomUser;
+  
+  randomUser: RandomUser;
+  selectedGender : Gender;
 
   constructor(
-    private randomUsersService: RandomUsersService,
-    private route: ActivatedRoute) {
-  };
+    private randomUsersService: RandomUsersService
+  ) { };
 
   ngOnInit(): void {
-    this.route.params.forEach((params: Params) => {
-      let id = +params['id'];
-      this.randomUsersService.getRandomUser()
-        .then(randomUser => this.randomUser = randomUser);
-    });
+    this.selectedGender = Gender.Any;
+
+    console.clear();
+    console.log(this.selectedGender);
+    console.log(Gender[this.selectedGender]);
+
+    this.getRandomUser();
   };
 
-}
+  getRandomUser(): void {
+    this.randomUsersService.getRandomUser(this.selectedGender)
+      .then(randomUser => {
+        this.randomUser = randomUser;
+        console.log(this.randomUser);
+      });
+  }
+};

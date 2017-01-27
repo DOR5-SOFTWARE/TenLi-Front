@@ -1,10 +1,12 @@
-"use strict";
-var router_1 = require('@angular/router');
-var appRoutes = [
-    {
-        path: '',
-        pathMatch: 'full'
-    }
-];
-exports.routing = router_1.RouterModule.forRoot(appRoutes);
+// import { AppComponent } from './app.component';
+// import { ModuleWithProviders } from '@angular/core';
+// import { Routes, RouterModule } from '@angular/router';
+// const appRoutes: Routes = [
+//   {
+//     path: '',
+//     pathMatch: 'full',
+//     component: AppComponent
+//   }
+// ];
+// export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes); 
 //# sourceMappingURL=app.routing.js.map
