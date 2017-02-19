@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    direction: rtl;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.blue {
+    color: #3BD9E6;
+}
+
+.clear {
+    clear: both;
+}
+
+@import "./app/styles/app.css";
+@font-face {
+    font-family: 'Material-Design-Iconic-Font';
+    src: url('/assets/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0') format('woff2'), url('/assets/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff?v=2.2.0') format('woff'), url('/assets/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

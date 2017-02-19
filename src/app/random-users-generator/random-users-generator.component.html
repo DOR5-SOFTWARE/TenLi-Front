@@ -1,0 +1,58 @@
+<div class="random-users-generator-bg" *ngIf="randomUser">
+    <div class="random-user-details-container">
+        <img src="{{randomUser.image.large}}" class="random-user-image" />
+
+        <div class="new-random-user-trigger">
+            <div class="gender-selector">
+                <span class="icon both" (click)="selectGender(gender.Any)" [class.selected]="selectedGender===gender.Any"></span>
+                <span class="icon male" (click)="selectGender(gender.Male)" [class.selected]="selectedGender===gender.Male"></span>
+                <span class="icon female" (click)="selectGender(gender.Female)" [class.selected]="selectedGender===gender.Female"></span>
+            </div>
+            <div class="get-random-user-btn" (click)="getRandomUser()">
+                <span class="icon">&nbsp;</span>
+                <span class="text">תן לי חדש</span>
+            </div>
+        </div>
+
+        <div class="random-user-details">
+            <div class="prefix light">היי, קוראים לי</div>
+            <div class="name">{{randomUser.firstname.hebValue}} {{randomUser.lastname.hebValue}}</div>
+
+            <div class="separator"></div>
+
+            <div class="details-line">
+                <span class="icon">&#xf15a;</span>
+                <span class="text light">{{randomUser.email}}</span>
+            </div>
+            <div class="details-line">
+                <span class="icon">&#xf207;</span>
+                <span class="text light">{{randomUser.firstname.engValue}}.{{randomUser.lastname.engValue}}</span>
+            </div>
+            <div class="details-line">
+                <span class="icon">&#xf2be;</span>
+                <span class="text light">{{randomUser.phoneNumber}}</span>
+            </div>
+            <div class="details-line">
+                <span class="icon">&#xf1ab;</span>
+                <span class="text light">{{randomUser.address.addressString}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="copy-all-btn">
+        <span class="text">העתק הכל</span>
+        <span class="icon"></span>
+    </div>
+</div>
+<div class="disclaimer light">
+    <span class="medium">סתם כדאי לדעת </span>שהפרטים שאנחנו בוחרים בשבילך, אקראים לחלוטין, מומצאים וממש לא יובילו לאנשים אמיתיים :)
+</div>
+
+<!--
+Envelope icon - [&#xf15a;]
+User icon - [&#xf206;]
+Phone icon - [&#xf2cc;]
+Pin icon - [&#xf1ab;]
+
+user: [&#xf207;]
+Phone: [&#xf2be;]
+	-->

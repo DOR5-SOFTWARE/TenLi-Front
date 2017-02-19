@@ -1,0 +1,82 @@
+.main-content {
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/images/main-bg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.header .title-bg {
+    height: 179px;
+    width: 446px;
+    position: relative;
+    right: 0;
+    background: url("/assets/images/header-bg.svg") no-repeat top right;
+}
+
+.header .title-text {
+    height: 60px;
+    width: 446px;
+    display: inline-block;
+    margin: 28px 35px 37px 0;
+}
+
+.header h1 {
+    width: 132px;
+    height: 60px;
+    font-size: 50px;
+    line-height: 60px;
+    float: right;
+}
+
+.header h2 {
+    width: 226px;
+    height: 36px;
+    font-size: 15px;
+    text-align: right;
+    line-height: 18px;
+    color: #8C9DAF;
+    float: right;
+    margin: 15px 17px 9px 0;
+}
+
+.random-users-generator-wrapper {
+    height: 590px;
+    width: 773px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer {
+    font-size: 15px;
+    text-align: right;
+    line-height: 18px;
+    color: #8C9DAF;
+    height: 55px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer .credits {
+    float: right;
+    margin-right: 40px;
+}
+
+.footer .credits .personal {
+    width: 145px;
+    height: 18px;
+}
+
+.footer .copyright {
+    float: left;
+    margin-left: 40px;
+}
