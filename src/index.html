@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TenLi Random User Generator</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;subset=hebrew" rel="stylesheet">
+    <title>TenLi Hebrew Random User Generator</title>
 
-    <base href="/">
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;subset=hebrew" rel="stylesheet" />
+
+    <link href="/assets/styles/app.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -28,21 +30,40 @@
         </div>
 
         <div class="random-users-generator-wrapper">
-            <random-users-generator>מחפשים לך יוזר ...</random-users-generator>
+            <div class="random-users-generator-bg">
+                <random-users-generator>
+                    <div style="position:absolute; top:50%; left:50%;">מייצרים לך משתמש ...</div>
+                </random-users-generator>
+            </div>
+            <div class="disclaimer light">
+                <span class="medium">סתם כדאי לדעת </span>שהפרטים שאנחנו בוחרים בשבילך, אקראים לחלוטין, מומצאים וממש לא יובילו לאנשים אמיתיים :)
+            </div>
         </div>
 
         <div class="footer">
             <div class="credits">
-                <span class="personal">פיתוח אנטון</span>
-                <span class="personal">UX/UI  ולריה</span>
+
+                <span class="personal" style="margin-left:15px;">פיתוח - אנטון</span>
+
+                <a class="icon personal-link" href="https://twitter.com/antondorofeyev" target="_blank">&#xf360;</a>
+                <a class="icon personal-link" href="https://il.linkedin.com/in/anton-dorofeyev-5b91b733" target="_blank">&#xf356;</a>
+                <a class="icon personal-link" href="https://github.com/dorofeyev" target="_blank">&#xf344;</a>
+                <!--<a class="icon personal-link" href="http://coding4dummies.net" target="_blank">&#xf173;</a>-->
+
+                <span class="personal" style="margin-left:15px; margin-right:48px;">UX/UI - ולריה</span>
+
+                <a class="icon personal-link" href="https://www.facebook.com/vdorofeyev" target="_blank">&#xf342;</a>
+                <a class="icon personal-link" href="https://il.linkedin.com/in/valeria-dorofeyev-45639870" target="_blank">&#xf356;</a>
+                <a class="icon personal-link" href="https://dribbble.com/Lerador" target="_blank">&#xf33f;</a>
+                <a class="icon personal-link" href="https://valeriadesign.co.il" target="_blank">&#xf173;</a>
             </div>
             <div class="copyright">
-                <a href="#">קרדיטים - Credits  |  </a>
-                <span class="copyright-text">פרויקט משפחתי מבית משפחת דורופייב  |   Valeria & Anton   </span>
-                <span class="copyright-icon">@</span>
+                <a href="#" onclick="window.randomUsersGenerator.zone.run(() => {window.randomUsersGenerator.toggleCredits()}); return;">קרדיטים - Credits</a>
+                <span>&nbsp;|&nbsp;</span>
+                <span class="copyright-text">פרויקט משפחתי מבית משפחת דורופייב &nbsp;|&nbsp; Valeria & Anton &nbsp;</span>
+                <span class="copyright-icon light">&#xa9;</span>
             </div>
         </div>
-
     </div>
 </body>
 
