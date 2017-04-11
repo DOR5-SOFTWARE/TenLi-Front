@@ -1,0 +1,44 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    background-color: #3A4456;
+    z-index: 999;
+}
+
+.dialog-wrapper {
+    text-align: center;
+    white-space: nowrap;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* The ghost, nudged to maintain perfect centering */
+
+.dialog-wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100vh;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */
+}
+
+.dialog {
+    z-index: 1100;
+    background-color: transparent;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    /*
+    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+    */
+}

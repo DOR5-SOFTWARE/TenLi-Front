@@ -1,0 +1,204 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    direction: rtl;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.blue {
+    color: #3BD9E6;
+}
+
+.clear {
+    clear: both;
+}
+
+@font-face {
+    font-family: 'Material-Design-Iconic-Font';
+    src: url('/assets/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff2?v=2.2.0') format('woff2'), url('/assets/material-design-iconic-font/fonts/Material-Design-Iconic-Font.woff?v=2.2.0') format('woff'), url('/assets/material-design-iconic-font/fonts/Material-Design-Iconic-Font.ttf?v=2.2.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    display: inline-block;
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-content {
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/images/main-bg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+
+.header .title-bg {
+    height: 179px;
+    width: 446px;
+    position: relative;
+    right: 0;
+    background: url("/assets/images/header-bg.svg") no-repeat top right;
+}
+
+.header .title-text {
+    height: 60px;
+    width: 446px;
+    display: inline-block;
+    margin: 28px 35px 37px 0;
+}
+
+.header h1 {
+    width: 132px;
+    height: 60px;
+    font-size: 50px;
+    line-height: 60px;
+    float: right;
+}
+
+.header h2 {
+    width: 226px;
+    height: 36px;
+    font-size: 15px;
+    text-align: right;
+    line-height: 18px;
+    color: #8C9DAF;
+    float: right;
+    margin: 15px 17px 9px 0;
+}
+
+.random-users-generator-wrapper {
+    height: 590px;
+    width: 774px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -295px 0 0 -387px;
+}
+
+.random-users-generator-bg {
+    position: relative;
+    width: 773px;
+    height: 444px;
+    background: url(/assets/images/random-users-generator-bg.png) no-repeat left;
+    margin-top: 64px;
+}
+
+.disclaimer {
+    width: 441px;
+    height: 36px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    color: #8C9DAF;
+    margin-top: 47px;
+    margin-right: 168px;
+}
+
+.footer {
+    font-size: 15px;
+    text-align: right;
+    line-height: 18px;
+    color: #8C9DAF;
+    /*height: 55px;*/
+    height: 40px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer .credits {
+    float: right;
+    margin-right: 40px;
+}
+
+.footer .credits .personal {
+    width: 145px;
+    height: 18px;
+}
+
+.personal-link {
+    margin-left: 10px;
+}
+
+.copyright-icon {
+    font-size: 18px;
+}
+
+.footer .copyright {
+    float: left;
+    margin-left: 40px;
+    line-height: 18px;
+}
+
+.footer .copyright a:hover {
+    text-decoration: underline;
+}

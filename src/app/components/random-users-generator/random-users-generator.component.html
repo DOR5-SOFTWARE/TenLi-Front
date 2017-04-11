@@ -1,0 +1,50 @@
+<div class="new-random-user-trigger">
+    <div class="gender-selector">
+        <span class="icon both" (click)="selectGender(gender.Any)" [class.selected]="selectedGender===gender.Any"></span>
+        <span class="icon male" (click)="selectGender(gender.Male)" [class.selected]="selectedGender===gender.Male"></span>
+        <span class="icon female" (click)="selectGender(gender.Female)" [class.selected]="selectedGender===gender.Female"></span>
+    </div>
+    <div class="get-random-user-btn" (click)="getRandomUser()">
+        <span class="icon">&nbsp;</span>
+        <span class="text">תן לי חדש</span>
+    </div>
+</div>
+
+<div class="random-user-details-container" *ngIf="randomUser">
+    <img src="{{randomUser.image.large}}" class="random-user-image" />
+
+    <div class="random-user-details">
+        <div class="prefix light">היי, קוראים לי</div>
+
+        <div class="name" ngxClipboard [cbContent]="getUserFullname()" (cbOnSuccess)="showCopiedToClipboardModal(getUserFullname())">{{randomUser.firstname.hebValue}} {{randomUser.lastname.hebValue}}</div>
+
+        <div class="separator"></div>
+
+        <div class="details-line">
+            <span class="icon">&#xf15a;</span>
+            <span class="text light" ngxClipboard [cbContent]="randomUser.email" (cbOnSuccess)="showCopiedToClipboardModal(randomUser.email)">{{randomUser.email}}</span>
+        </div>
+        <div class="details-line">
+            <span class="icon">&#xf207;</span>
+            <span class="text light" ngxClipboard [cbContent]="getUserUsername()" (cbOnSuccess)="showCopiedToClipboardModal(getUserUsername())">{{randomUser.firstname.engValue}}.{{randomUser.lastname.engValue}}</span>
+        </div>
+        <div class="details-line">
+            <span class="icon">&#xf2be;</span>
+            <span class="text light" ngxClipboard [cbContent]="randomUser.phoneNumber" (cbOnSuccess)="showCopiedToClipboardModal(randomUser.phoneNumber)">{{randomUser.phoneNumber}}</span>
+        </div>
+        <div class="details-line">
+            <span class="icon">&#xf1ab;</span>
+            <span class="text light" ngxClipboard [cbContent]="randomUser.address.addressString" (cbOnSuccess)="showCopiedToClipboardModal(randomUser.address.addressString)">{{randomUser.address.addressString}}</span>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="randomUser" class="copy-all-btn" ngxClipboard [cbContent]="getUserDetailsText()" (cbOnSuccess)="showCopiedToClipboardModal()">
+    <span class="text">העתק הכל</span>
+    <span class="icon"></span>
+</div>
+
+<modal-message [(visible)]="showModalMessage">
+    <span class="copied-title"> רק להדביק, כבר העתקנו :)</span> <br />
+    <span class="clipboard-text light">{{clipboardText}}</span>
+</modal-message>

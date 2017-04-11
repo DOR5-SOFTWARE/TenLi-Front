@@ -1,0 +1,6 @@
+<div *ngIf="visible" [@message] class="dialog-wrapper" (click)="close()">
+    <div class="dialog">
+        <ng-content></ng-content>
+    </div>
+</div>
+<div [@overlay] *ngIf="visible" class="overlay" (click)="close()"></div>
