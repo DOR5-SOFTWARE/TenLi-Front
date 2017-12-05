@@ -2,5 +2,6 @@
 {
 	"editor.insertSpaces": false,
 	"typescript.tsdk": "node_modules/typescript/lib",
-	"vsicons.presets.angular": true
+	"vsicons.presets.angular": true,
+	"git.ignoreLimitWarning": true
 }
